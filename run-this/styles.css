@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --primary-color: hsl(179, 62%, 43%); /* Cyan */
+  --primary-color-1: hsl(204, 43%, 93%); /*  Light Gray */
+  --secondary-color: hsl(71, 73%, 54%); /* Bright Yellow*/
+  --text-color: hsl(218, 22%, 67%); /*Grayish Blue */
+  --text-color-1: hsl(203, 18%, 86%); /*  Light Gray */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--primary-color-1);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Karla", sans-serif;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+.grid-1 p {
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.container {
+  width: 500px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0.1rem 0.2rem 1.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+
+.grid-1 {
+  background-color: hsl(0, 0%, 100%);
+  grid-column: 1 / -1;
+  padding: 3rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.grid-1 h1 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.grid-1 h4 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.grid-1 p {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.grid-2 {
+  background-color: var(--primary-color);
+  border-bottom-left-radius: 1rem;
+  padding: 3rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.grid-2 h4 {
+  /* font-size: 16px; */
+  margin-bottom: 1rem;
+}
+
+.price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.grid-2 p {
+  margin-bottom: 2rem;
+}
+
+.num {
+  font-size: 2rem;
+}
+
+.dura {
+  color: var(--text-color-1);
+  font-size: 1.2rem;
+}
+
+.grid-2 button {
+  font-size: 1.2rem;
+  width: 100%;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--secondary-color);
+  padding: 1.3rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.grid-3 {
+  background-color: hsl(179, 53%, 50%);
+  border-bottom-right-radius: 0.5rem;
+  padding: 3rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.grid-3 h4 {
+  margin-bottom: 1rem;
+}
+
+.grid-3 p {
+  color: var(--text-color-1);
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 462px) {
+  body {
+    padding: 3rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-2 {
+    border-bottom-left-radius: 0;
+  }
+
+  .grid-3 {
+    border-bottom-left-radius: 0.5rem;
+  }
+}
